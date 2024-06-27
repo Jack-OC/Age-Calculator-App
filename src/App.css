@@ -1,38 +1,236 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap");
+
+:root {
+  --primary-font: Poppins, sans-serif;
+
+  --fw-bold: 800;
+  --fw-semibold: 700;
+  --fw-regular: 400;
+
+  --primary-purple: hsl(259, 100%, 65%);
+  --primary-light-red: hsl(0, 100%, 67%);
+
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-gray: hsl(0, 0%, 86%);
+  --smokey-gray: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html,
+body {
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  line-height: 1.6;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-weight: var(--fw-thin);
+  background-color: var(--off-white);
+  display: grid;
+  place-content: center;
+  font-weight: var(--fw-semibold);
+  color: var(--off-black);
+}
+
+.age-calculator-card {
+  width: 350px;
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem 1.8rem;
+  border-radius: 1rem 1rem 5rem 1rem;
+  background-color: var(--white);
+  position: relative;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.2rem;
+  color: var(--smokey-gray);
+}
+
+input[type="number"] {
+  width: 5.5rem;
+  padding: 0.937rem;
+  padding-left: 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid var(--light-gray);
+}
+
+input[type="number"]::placeholder {
+  font-weight: var(--fw-semibold);
+  color: var(--smokey-gray);
+}
+
+input[type="number"]:focus {
+  color: var(--off-black);
+  font-weight: var(--fw-semibold);
+  caret-color: var(--primary-purple);
+  border: 1px solid var(--primary-purple);
+}
+
+.input[type="number"]::selection {
+  color: var(--off-black);
+}
+
+.input[type="number"]:hover,
+.submit-btn:hover {
+  cursor: pointer;
+}
+
+.error-msg {
+  text-align: left;
+  color: var(--primary-light-red);
+  font-style: italic;
+  font-size: 0.75rem;
+  font-weight: var(--fw-regular);
+}
+
+.button-div {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  margin-top: 1.5rem;
+}
+
+.line {
+  width: 40%;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.submit-btn {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--primary-purple);
 }
 
-.App-link {
-  color: #61dafb;
+.submit-btn:hover {
+  background-color: var(--off-black);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.submit-btn .btn-img {
+  width: 1.5rem;
+  color: var(--white);
+}
+
+.age-output {
+  line-height: 1.1;
+}
+
+.output {
+  font-size: 3rem;
+  font-weight: var(--fw-bold);
+  font-style: italic;
+  color: var(--off-black);
+  letter-spacing: -0.1rem;
+}
+
+.number {
+  color: var(--primary-purple);
+}
+
+@media (min-width: 600px) {
+  .age-calculator-card {
+    width: 700px;
+    height: 550px;
+    padding: 2.5rem;
+    gap: 0;
+    border-radius: 1rem 1rem 10rem 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+ .form {
+    width: 480px;
+  }
+
+  input[type="number"] {
+    width: 8.75rem;
+    padding: 0.6rem;
+    padding-left: 1.2rem;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+  }
+
+  .submit-btn {
+    width: 5.3rem;
+    height: 5.3rem;
+  }
+
+  .submit-btn .btn-img {
+    width: 2rem;
+    color: var(--white);
+  }
+  
+  .line{
+    width: 85%;
+  }
+  
+  .line-2{
+    display: none;
+  }
+
+  .output {
+    font-size: 5rem;
+  }
+
+  .number {
+    letter-spacing: 0.5rem;
   }
 }
