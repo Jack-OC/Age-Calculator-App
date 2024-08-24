@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Jack-OC/Age-Calculator-App/static/css/main.c897cab7.css",
-    "main.js": "/Jack-OC/Age-Calculator-App/static/js/main.dc25148b.js",
-    "index.html": "/Jack-OC/Age-Calculator-App/index.html",
-    "static/media/icon-arrow.svg": "/Jack-OC/Age-Calculator-App/static/media/icon-arrow.76e952b1b427b84b83bd01f2f4822499.svg",
-    "main.c897cab7.css.map": "/Jack-OC/Age-Calculator-App/static/css/main.c897cab7.css.map",
-    "main.dc25148b.js.map": "/Jack-OC/Age-Calculator-App/static/js/main.dc25148b.js.map"
+    "main.css": "/Age-Calculator-App/static/css/main.c897cab7.css",
+    "main.js": "/Age-Calculator-App/static/js/main.dfb07118.js",
+    "index.html": "/Age-Calculator-App/index.html",
+    "static/media/icon-arrow.svg": "/Age-Calculator-App/static/media/icon-arrow.76e952b1b427b84b83bd01f2f4822499.svg",
+    "main.c897cab7.css.map": "/Age-Calculator-App/static/css/main.c897cab7.css.map",
+    "main.dfb07118.js.map": "/Age-Calculator-App/static/js/main.dfb07118.js.map"
   },
   "entrypoints": [
     "static/css/main.c897cab7.css",
-    "static/js/main.dc25148b.js"
+    "static/js/main.dfb07118.js"
   ]
 }
